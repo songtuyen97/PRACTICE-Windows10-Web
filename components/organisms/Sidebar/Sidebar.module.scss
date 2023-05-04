@@ -1,0 +1,104 @@
+@use "@/styles/varriable.module" as v;
+
+.sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: v.$sidebar-height;
+    background-color: v.$color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid v.$color-gray-2;
+    z-index: v.$zIndex-hell;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+
+    .sidebar_right {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .search_input__container {
+            height: 100%;
+            position: relative;
+            z-index: v.$zIndex-over-modal;
+            border-right: 1px solid v.$color-gray-2;
+            border-left: 1px solid v.$color-gray-2;
+            &:hover {
+                border: 1px solid v.$color-gray-1;
+            }
+            &::before {
+                content: "";
+                background-image: url("/icons/search.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                top: 50%;
+                left: 7px;
+                width: 22px;
+                height: 22px;
+                transform: translateY(-50%);
+                display: inline-block;
+                z-index: 1;
+            }
+        }
+
+        .search_input {
+            height: 100%;
+            width: 18.75rem;
+            border: 1px solid transparent;
+            font-size: 1.3rem;
+            padding-left: 35px;
+            position: relative;
+
+            &::placeholder {
+                font-size: 0.95rem;
+                font-weight: 200;
+                color: v.$color-gray-3;
+            }
+
+            &:hover {
+                border: 1px solid v.$color-gray-1;
+            }
+        }
+    }
+
+
+    .sidebar_right {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .time {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-size: 0.95rem;
+            padding: 0 0.625rem;
+            cursor: default;
+            &:hover {
+                background-color: v.$color-primary-2;
+            }
+        }
+
+        .desktop_shortcut {
+            border-left: 1px solid v.$color-gray-1;
+            width: 0.375rem;
+            height: 100%;
+            margin-left: 0.625rem;
+
+            &:hover {
+                background-color: v.$color-primary-2;
+            }
+        }
+    }
+}

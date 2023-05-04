@@ -1,0 +1,38 @@
+// Colors
+$color-primary: #d2e4ef;
+$color-primary-1: #f6fafc;
+$color-primary-2: #ecf0f1;
+
+// Colors Gray
+$color-gray-1: #adadad;
+$color-gray-2: #dbdbdb;
+$color-gray-3: #424242;
+
+//
+$color-black: #000;
+
+$breakpoints: (
+    'small': 767px,
+    'medium': 992px,
+    'large': 1200px) !default;
+
+// Breakpoints
+@mixin pb($breakpoint) {
+
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        // Prints a media query based on the value
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+
+// Sizes
+$sidebar-height: 2.8125rem;
+
+$zIndex-hell: 9999999999999;
+$zIndex-over-modal: 1001;
+$zIndex-modal: 1000;

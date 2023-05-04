@@ -1,0 +1,40 @@
+@use '@/styles/varriable.module' as v;
+
+.window_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.15s all;
+
+    .card {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 70%;
+        width: 650px;
+        background-color: rgba(v.$color-primary, 0.7);
+        z-index: v.$zIndex-modal;
+        box-shadow: 3px -3px 8px 0 v.$color-gray-2;
+        transition: 0.15s all ease-out;
+    }
+
+    &.inactive {
+        opacity: 0;
+        visibility: hidden;
+
+        .card {
+            bottom: 0;
+        }
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+
+        .card {
+            bottom: v.$sidebar-height;
+        }
+    }
+}
