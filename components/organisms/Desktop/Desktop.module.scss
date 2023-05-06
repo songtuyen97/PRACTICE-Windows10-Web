@@ -1,0 +1,9 @@
+@use "@/styles/varriable.module.scss" as v;
+
+.desktop {
+    height: calc(100vh - v.$sidebar-height);
+    background-image: url("/images/desktop.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3px;
+}

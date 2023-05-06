@@ -1,0 +1,44 @@
+@use "@/styles/varriable.module" as v;
+
+.container {
+    height: 6.5rem;
+}
+
+.desktop_item {
+    min-height: 5rem;
+    padding: 3px;
+    width: 4.2rem;
+    font-size: 0.70rem;
+    color: v.$color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 3px 3px 3px v.$color-black;
+    border: 1px solid transparent;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+    &:hover {
+        background-color: rgba(v.$color-white, $alpha: 0.15);
+        border: 1px solid #66c2ff;
+    }
+
+    &.active {
+        background-color: rgba(v.$color-white, $alpha: 0.2);
+        border: 1px solid #66c2ff;
+        &:hover {
+            background-color: rgba(v.$color-white, $alpha: 0.1);
+            border: 1px solid #66c2ff;
+        }
+    }
+
+    .image {
+        margin-bottom: 5px;
+    }
+}
