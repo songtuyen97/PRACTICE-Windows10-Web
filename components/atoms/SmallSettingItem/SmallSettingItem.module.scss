@@ -1,0 +1,19 @@
+@use "@/styles/varriable.module" as v;
+
+.small_setting_item {
+    height: 100%;
+    padding: 0 3px 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: v.$color-primary-2;
+    }
+    &:active {
+        background-color: rgba(v.$color-primary-2, 0.5);
+    }
+
+    &.active {
+        background-color: v.$color-primary-2;
+    }
+}

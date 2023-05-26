@@ -88,6 +88,13 @@
             &:hover {
                 background-color: v.$color-primary-2;
             }
+            &:active {
+                background-color: rgba(v.$color-primary-2, 0.5);
+            }
+        
+            &.active {
+                background-color: v.$color-primary-2;
+            }
         }
 
         .desktop_shortcut {
@@ -99,6 +106,16 @@
             &:hover {
                 background-color: v.$color-primary-2;
             }
+        }
+
+        .small_setting {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .notification {
+            padding: 0 8px;
         }
     }
 }

@@ -1,0 +1,66 @@
+@use "@/styles/varriable.module" as v;
+
+.notification_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: v.$sidebar-height;
+    transition: .25s all;
+
+    .card {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 25rem;
+        background-color: v.$color-primary;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        .card_header {
+            text-align: right;
+            > p {
+                font-size: 0.85rem;
+                color: #0283DD;
+            }
+        }
+
+        .card_content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .card_footer {
+            height: 5.9375rem;
+            .expand_title {
+                font-size: 0.85rem;
+                color: v.$color-blue;
+                margin-bottom: 1rem;
+                margin-top: 0;
+            }
+
+            .notification_setting {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    &.active {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.inactive {
+        right: -25%;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
